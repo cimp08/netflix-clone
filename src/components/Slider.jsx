@@ -34,21 +34,21 @@ const Slider = () => {
   console.log(items);
 
   return (
-    <div className="mt-[24px]">
+    <div>
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Autoplay, A11y]}
         slidesPerView={1}
         /* navigation */
         pagination={{ clickable: true }}
-        autoplay 
+        autoplay
       >
         {items.map((item) => (
           <SwiperSlide key={item?.id} style={{ height: "60vh" }}>
             <div
               className="slider__image flex flex-col justify-end items-center h-full w-full text-white"
               style={{
-                backgroundImage: `linear-gradient(180deg, rgba(2,0,36,1) 10%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,0.65) 30%), url(https://image.tmdb.org/t/p/original${item?.backdrop_path})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://image.tmdb.org/t/p/original${item?.backdrop_path})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
               }}
