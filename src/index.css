@@ -4,7 +4,27 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
+/* HIDE SCROLLBAR */
+
+* {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #000;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.sign-section {
+  background: linear-gradient(180deg, rgba(2,0,36,1) 10%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,0.65) 30%),
+    url(https://assets.nflxext.com/ffe/siteui/vlv3/b321426e-35ae-4661-b899-d63bca17648a/73c8b768-35f8-4202-ad72-7eb4bfc69edd/SE-sv-20220926-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+}
+
+@media screen and (max-width: 640px) {
+  .sign-section {
+    background: #000;
+  }
 }
