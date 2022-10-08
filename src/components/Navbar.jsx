@@ -136,7 +136,10 @@ const Navbar = () => {
 
         {/* MOBILE DEVICES, HAMBURGER MENU */}
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div
+          className="sm:hidden flex flex-1 justify-end items-center"
+          ref={ref}
+        >
           <img
             src={toggle ? close : menu}
             alt="navbar menu"
@@ -150,7 +153,6 @@ const Navbar = () => {
             className={`${
               toggle ? "flex" : "hidden"
             } p-6 bg-black/60 absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
-            ref={ref}
           >
             <ul className="list-none flex flex-col justify-end items-center flex-1">
               {user?.email ? (
